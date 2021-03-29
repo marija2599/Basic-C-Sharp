@@ -6,16 +6,16 @@ namespace AverageNumber
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter first number: ");
-            int firstNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter second number: ");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter third number: ");
-            int thirdNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter fourth number: ");
-            int fourthNumber = Convert.ToInt32(Console.ReadLine());
-            int average = (firstNumber + secondNumber + thirdNumber + fourthNumber) / 4;
-            Console.WriteLine($"The average of {firstNumber}, {secondNumber}, {thirdNumber} and {fourthNumber} is: {average}");
+            Console.WriteLine("Enter the first number: ");
+            bool firstNumberParsed = int.TryParse(Console.ReadLine(), out int num1);
+            Console.WriteLine("Enter the second number: ");
+            bool secondNumberParsed = int.TryParse(Console.ReadLine(), out int num2);
+            Console.WriteLine("Enter the first number: ");
+            bool thirdNumberParsed = int.TryParse(Console.ReadLine(), out int num3);
+            Console.WriteLine("Enter the second number: ");
+            bool fourthNumberParsed = int.TryParse(Console.ReadLine(), out int num4);
+            int average = (num1 + num2 + num3 + num4) / 4;
+            Console.WriteLine($"The average of {num1}, {num2}, {num3} and {num4} is: {average}");
             Console.ReadLine();
 
         }

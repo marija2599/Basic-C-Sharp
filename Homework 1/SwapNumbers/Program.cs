@@ -7,15 +7,15 @@ namespace SwapNumbers
         static void Main(string[] args)
         {
             Console.WriteLine("Enter first number: ");
-            int firstNumber = Convert.ToInt32(Console.ReadLine());
+            bool parsingResult1 = int.TryParse(Console.ReadLine(), out int num1);
             Console.WriteLine("Enter second number: ");
-            int secondNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Before swaping: first number = {firstNumber}, second number = {secondNumber}");
-            int swapNumber;
-            swapNumber = firstNumber;
-            firstNumber = secondNumber;
-            secondNumber = swapNumber;
-            Console.WriteLine($"After swaping: first number = {firstNumber}, second number = {secondNumber}");
+            bool parsingResult2 = int.TryParse(Console.ReadLine(), out int num2);
+            int swapNum;
+            Console.WriteLine($"Before swaping: first number: {num1}, second number: {num2}");
+            swapNum = num1;
+            num1 = num2;
+            num2 = swapNum;
+            Console.WriteLine($"After swaping: first number: {num1}, second number: {num2}");
             Console.ReadLine();
         }
     }
